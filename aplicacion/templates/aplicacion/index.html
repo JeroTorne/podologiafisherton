@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Podología Fisherton</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'aplicacion/assets/logopodowhite.ico' %}" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Fontawesome Icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'aplicacion/css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'aplicacion/css/whatsapp.css' %}" rel="stylesheet">
+    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://wa.me/+5493413095007" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    <body id="page-top">
+
+
+<!-- -------------------------------NAVEGACION--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Navigation-->
+        
+        {% block Navegacion %}           
+        <nav style="height: 9vh;" class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'aplicacion/assets/img/logo_podo.png' %}" height="50" width="">&nbsp;&nbsp;&nbsp;Podología Fisherton</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="btn btn-light btn-m" href="{% url 'turnos' %}">Sacar Turno</a></li>&nbsp;&nbsp;&nbsp;&nbsp;  
+                        <li class="nav-item"><a class="btn btn-light btn-m" href="{% url 'staff' %}">Nuestro Staff</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% endblock Navegacion %}
+<!-- -------------------------------FIN NAVEGACION--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+<!-- --------------------------BODY------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Masthead-->
+        
+        {% block Body %}
+            
+        
+            
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <h1 style="line-height: 1;" class="text-white font-weight-bold">Abordaje integral del pie</h1>
+                    <p style="line-height: 0;" class="text-white-75 mb-5">Prevención, diagnóstico y tratamiento de las afecciones del pie</p>
+                    <table id="slide" style="width: 50vh;border-color: #fff;" class="table">
+
+                        <td>
+                            <div class="container-slide">
+                                <div class="slide">
+                                    <ul>
+                            <li><img src="{% static 'aplicacion/assets/img/carrusel-1.jpg' %}" alt=""></li>
+                            <li><img src="{% static 'aplicacion/assets/img/carrusel-2.jpg' %}" alt=""></li>
+                            <li><img src="{% static 'aplicacion/assets/img/carrusel-3.jpg' %}" alt=""></li>
+                            <li><img src="{% static 'aplicacion/assets/img/carrusel-4.jpg' %}" alt=""></li>
+                            <li><img src="{% static 'aplicacion/assets/img/carrusel-5.jpg' %}" alt=""></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            </td>
+    
+    
+    
+    
+                        
+    
+    
+    
+    
+    
+    
+                    </table>
+                </div>
+            </div>
+        </header>
+        
+
+
+
+        {% endblock Body %}
+<!-- --------------------------FIN BODY------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+<!-- --------------------------------------FOOTER-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        
+            
+        <!-- Footer-->
+        {% block footer %}
+        <footer style="height: 10vh;" id="footer" class="bg-light py-4">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+
+                <div class="col-lg-4 text-center mb-5 mb-lg-0">
+
+                    <ul class="list-inline mb-0">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <li class="list-inline-item me-5">
+                            <a href="https://www.facebook.com/podologiafisherton"><i class="bi-facebook fs-3"></i></a>
+                        </li>
+                        <li class="list-inline-item me-5">
+                            <a href="https://www.instagram.com/podologiafisherton/"><i class="bi-instagram fs-3"></i></a>
+                        </li>
+
+                        <div class="small text-center text-muted">Copyright &copy; 2023 - Jeronimo Torne</div>
+                    </ul>
+                </div>
+
+            </div>
+            
+        </footer>
+        {% endblock %}
+        
+
+<!-- --------------------------------------FIN FOOTER-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'aplicacion/js/scripts.js' %}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+          // Obtén el elemento del mensaje de éxito
+          const successMessage = $('#success-message');
+        
+          // Función para ocultar el mensaje con un efecto de desvanecimiento
+          function hideSuccessMessage() {
+            successMessage.fadeOut('slow', function() {
+              // Una vez que se completa el desvanecimiento, oculta el elemento
+              successMessage.hide();
+            });
+          }
+        
+          // Establece el temporizador para ocultar el mensaje después de 5 segundos (5000 ms)
+          setTimeout(hideSuccessMessage, 2000); // Cambia el valor para ajustar el tiempo en milisegundos
+        </script>
+    </body>
+</html>
