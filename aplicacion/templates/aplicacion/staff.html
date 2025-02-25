@@ -2,46 +2,34 @@
 {% load static %}
 
 {% block Body %}
-    <header class="mastheadconsultas">
-        <div class="container px-4 px-lg-5 h-100">
-            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                <table id="FormularioConsulta" style="text-align: justify;width: 150vh;border-color: #fff;" class="table">
-                    
-                    <td><img src="{% static 'aplicacion/assets/img/abme.jpg' %}" style="height: 400px;width: auto;border-radius:0.5rem"></td>
-                    
-                    <td><p><h3>Veronica Weedon</h3>Matrícula Colegio de Podólogos de la Pcia de Santa Fe N° 02-1582. 
-                        Me recibí de Técnica Universitaria en Podología en Universidad del Gran Rosario en el año 2019. 
-                        Actualmente estoy cursando la Licenciatura en Podología en la Universidad Nacional del Litoral en Santa Fé.
-                        </p></td>
+<header class="mastheadconsultas">
+    <div class="container-staff">
+        <div class="staff-item">
+            <img src="{% static 'aplicacion/assets/img/webp/abme.webp' %}" class="staff-img" alt="Veronica Weedon podologa en su consultorio">
+        </div>
+        
+        <div class="staff-item staff-text">
+            
+            <p><strong style="font-size:large; color: #04263f;">Veronica Weedon</strong> Matrícula Colegio de Podólogos de la Pcia de Santa Fe N° 02-1582. 
+            Me recibí de Técnica Universitaria en Podología en Universidad del Gran Rosario en el año 2019. 
+            Actualmente estoy cursando la Licenciatura en Podología en la Universidad Nacional del Litoral en Santa Fé.</p>
+        </div>
 
-                        <td>
-                            <div class="container-slide">
-                                <div class="slide">
-                                    <ul>
-                            <li><img src="{% static 'aplicacion/assets/img/ugr.jpg' %}" alt=""></li>
-                            <li><img src="{% static 'aplicacion/assets/img/recontruccion.jpg' %}" alt=""></li>
-                            <li><img src="{% static 'aplicacion/assets/img/unas.jpg' %}" alt=""></li>
-                            <li><img src="{% static 'aplicacion/assets/img/anestesico.jpg' %}" alt=""></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            </td>
-    
-
-
-
-
-
-                    
-
-
-
-
-
-
-                </table>
+        <div class="staff-item">
+            <div class="container-slide-staff">
+                <div class="slide">
+                    <ul>
+                        <li><img src="{% static 'aplicacion/assets/img/webp/ugr.webp' %}" alt="Título de la tecnicatura en podología de Veronica Weedon"></li>
+                        <li><img src="{% static 'aplicacion/assets/img/webp/recontruccion.webp' %}" alt="Certificado de curso en reconstrucción de uñas"></li>
+                        <li><img src="{% static 'aplicacion/assets/img/webp/unas.webp' %}" alt="Certificado de curso de uñas esculpidas"></li>
+                        <li><img src="{% static 'aplicacion/assets/img/webp/anestesico.webp' %}" alt="Certificado de curso de aplicación de anestésico"></li>
+                        <li><img src="{% static 'aplicacion/assets/img/webp/recontruccion.webp' %}" alt="Certificado de curso en reconstrucción de uñas"></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </header>        
+    </div>
+</header>
+     
         
 {% endblock Body %}

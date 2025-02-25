@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         {% load static %}
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
+        <meta name="description" content="Podología Fisherton ofrece un abordaje integral para la prevención, diagnóstico y tratamiento de afecciones del pie en Rosario. Nuestro equipo de podólogos profesionales se dedica a cuidar la salud de sus pies, brindando soluciones personalizadas para cada paciente." />
+        <meta name="keywords" content="Podología en Rosario, Podóloga, Salud, Tratamiento, Afecciones, Prevención, diagnóstico, cuidado, uñas, encarnadas, especialista">
         <meta name="author" content="" />
-        <title>Podología Fisherton</title>
+        <title>Especialistas en Podología en Rosario | Prevención y Tratamiento del Pie</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="{% static 'aplicacion/assets/logopodowhite.ico' %}" />
         <!-- Bootstrap Icons-->
@@ -21,21 +22,47 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'aplicacion/css/styles.css' %}" rel="stylesheet" />
         <link href="{% static 'aplicacion/css/whatsapp.css' %}" rel="stylesheet">
+
+        <!-- Meta Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1341307050626749');
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1341307050626749&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WP4578LD');</script>
+        <!-- End Google Tag Manager -->
+
     </head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <a href="https://wa.me/+5493413095007" class="float" target="_blank">
     <i class="fa fa-whatsapp my-float"></i>
     </a>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QY540MNV7P"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-QY540MNV7P');
-    </script>
+
+
     <body id="page-top">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WP4578LD"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 
 <!-- -------------------------------NAVEGACION--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -43,18 +70,32 @@
         <!-- Navigation-->
         
         {% block Navegacion %}           
-        <nav style="height: 9vh;" class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="{% url 'inicio' %}"><img src="{% static 'aplicacion/assets/img/logo_podo.png' %}" height="50" width="">&nbsp;&nbsp;&nbsp;Podología Fisherton</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="btn btn-light btn-m" href="{% url 'turnos' %}">Sacar Turno</a></li>&nbsp;&nbsp;&nbsp;&nbsp;  
-                        <li class="nav-item"><a class="btn btn-light btn-m" href="{% url 'staff' %}">Nuestro Staff</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <nav id="mainNav">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a class="logonav" href="{% url 'inicio' %}">
+                    <img src="{% static 'aplicacion/assets/img/logo_podo.png' %}" alt="Logotipo podología fisherton - Podología Rosario" height="50">
+                    Podología Fisherton
+                </a>
+        
+                <!-- Botón de menú hamburguesa -->
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        
+                <!-- Lista de navegación -->
+                <div class="lista-nav-div">
+                    <ul class="lista-nav">
+                        <li><a href="{% url 'turnos' %}">Turnos</a></li>
+                        <li><a href="{% url 'staff' %}">Staff</a></li>
+                        <li><a href="https://www.facebook.com/podologiafisherton" target="_blank">
+                            <i class="fa-brands fa-square-facebook fa-lg"></i></a></li>
+                        <li><a href="https://www.instagram.com/podologiafisherton/" target="_blank">
+                            <i class="fa-brands fa-instagram fa-lg"></i></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        
         {% endblock Navegacion %}
 <!-- -------------------------------FIN NAVEGACION--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -68,39 +109,27 @@
         
             
         <header class="masthead">
-            <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <h1 style="line-height: 1;" class="text-white font-weight-bold">Abordaje integral del pie</h1>
-                    <p style="line-height: 0;" class="text-white-75 mb-5">Prevención, diagnóstico y tratamiento de las afecciones del pie</p>
-                    <table id="slide" style="width: 50vh;border-color: #fff;" class="table">
+                    <div>
+                        <section class="h1-h2"><h1>Consultorio de podología Fisherton Rosario</h1>
+                        <h2>Prevención, diagnóstico y tratamiento de las afecciones del pie</h2></section>
+                        <table id="slide" style="width: 50vh;border-color: #fff;" class="table">
 
-                        <td>
-                            <div class="container-slide">
-                                <div class="slide">
-                                    <ul>
-                            <li><img src="{% static 'aplicacion/assets/img/carrusel-1.jpg' %}" alt=""></li>
-                            <li><img src="{% static 'aplicacion/assets/img/carrusel-2.jpg' %}" alt=""></li>
-                            <li><img src="{% static 'aplicacion/assets/img/carrusel-3.jpg' %}" alt=""></li>
-                            <li><img src="{% static 'aplicacion/assets/img/carrusel-4.jpg' %}" alt=""></li>
-                            <li><img src="{% static 'aplicacion/assets/img/carrusel-5.jpg' %}" alt=""></li>
-                                    </ul>
+                            <td>
+                                <div class="container-slide">
+                                    <div class="slide">
+                                        <ul>
+                                <li><img src="{% static 'aplicacion/assets/img/webp/carrusel-1.webp' %}" alt="Consultorio de Veronica Weedon podologa Rosario"></li>
+                                <li><img src="{% static 'aplicacion/assets/img/webp/carrusel-2.webp' %}" alt="Consultorio de Veronica Weedon podologa Rosario"></li>
+                                <li><img src="{% static 'aplicacion/assets/img/webp/carrusel-3.webp' %}" alt="Consultorio de Veronica Weedon podologa Rosario"></li>
+                                <li><img src="{% static 'aplicacion/assets/img/webp/carrusel-4.webp' %}" alt="Consultorio de Veronica Weedon podologa Rosario"></li>
+                                <li><img src="{% static 'aplicacion/assets/img/webp/carrusel-5.webp' %}" alt="Consultorio de Veronica Weedon podologa Rosario"></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            </td>
-    
-    
-    
-    
-                        
-    
-    
-    
-    
-    
-    
-                    </table>
-                </div>
-            </div>
+                                </td>
+            
+                        </table>
+                    </div>
         </header>
         
 
@@ -110,7 +139,7 @@
 <!-- --------------------------FIN BODY------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 
-
+</body>
 
 <!-- --------------------------------------FOOTER-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -118,23 +147,16 @@
             
         <!-- Footer-->
         {% block footer %}
-        <footer style="height: 10vh;" id="footer" class="bg-light py-4">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
+        <footer style="padding: 2dvh 0;" id="footer">
 
-                <div class="col-lg-4 text-center mb-5 mb-lg-0">
-
-                    <ul class="list-inline mb-0">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <li class="list-inline-item me-5">
-                            <a href="https://www.facebook.com/podologiafisherton"><i class="bi-facebook fs-3"></i></a>
-                        </li>
-                        <li class="list-inline-item me-5">
-                            <a href="https://www.instagram.com/podologiafisherton/"><i class="bi-instagram fs-3"></i></a>
-                        </li>
-
-                        <div class="small text-center text-muted">Copyright &copy; 2023 - Jeronimo Torne</div>
+            <div>
+                <div class="lista-nav-div">
+                    <ul class="lista-nav">
+                        <li><a href="https://www.facebook.com/podologiafisherton" target="_blank"><i class="fa-brands fa-square-facebook fa-lg"></i></a></li>
+                        <li><a href="https://www.instagram.com/podologiafisherton/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                        <div>Copyright &copy; 2023 - Jeronimo Torne</div>
                     </ul>
                 </div>
-
             </div>
             
         </footer>
@@ -143,32 +165,6 @@
 
 <!-- --------------------------------------FIN FOOTER-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
         <script src="{% static 'aplicacion/js/scripts.js' %}"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-          // Obtén el elemento del mensaje de éxito
-          const successMessage = $('#success-message');
-        
-          // Función para ocultar el mensaje con un efecto de desvanecimiento
-          function hideSuccessMessage() {
-            successMessage.fadeOut('slow', function() {
-              // Una vez que se completa el desvanecimiento, oculta el elemento
-              successMessage.hide();
-            });
-          }
-        
-          // Establece el temporizador para ocultar el mensaje después de 5 segundos (5000 ms)
-          setTimeout(hideSuccessMessage, 2000); // Cambia el valor para ajustar el tiempo en milisegundos
-        </script>
-    </body>
+
 </html>

@@ -14,10 +14,9 @@ def index(request):
 
 #-------////----------FIN INDEX--------////------------------# 
 
+
 def staff(request):
     return render (request, "aplicacion/staff.html")
-
-
 
 
 
