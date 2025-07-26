@@ -196,7 +196,7 @@ nav {
 header.masthead {
   padding-top: 2rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background:linear-gradient(to bottom, rgba(4, 38, 63, 0.1) 0%, rgba(4, 38, 63, 0.15) 100%), url("../assets/img/bk-image.png");
+  background:linear-gradient(to bottom, rgba(4, 38, 63, 0.1) 0%, rgba(4, 38, 63, 0.15) 100%), url("../assets/img/webp/bk-image.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -303,19 +303,50 @@ h2{
 
 }
 
+/* Contenedor general */
 .container-staff {
   width: 80dvw;
-  height: auto; /* Permite que la altura se ajuste según el contenido */
+  height: auto;
   padding: 20px;
-  overflow: auto; /* Evita scroll innecesario */
-  display: grid;
-  flex-direction: column; /* Apila los elementos en móviles */
+  display: flex;
+  flex-direction: row; /* Mantiene la estructura en pantallas grandes */
   justify-content: center;
-  align-items: center; /* Centra el contenido */
+  align-items: center;
   background-color: #fff;
   border-radius: 2rem;
   margin: 20px auto;
+  gap: 20px; /* Espacio entre elementos */
 }
+
+/* Elementos individuales (imagen, texto, carrusel) */
+.staff-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Imagen */
+.staff-img {
+  max-width: 432px;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Texto */
+.staff-text {
+  max-width: 432px;
+  padding: 10px;
+  text-align: justify;
+}
+
+/* Carrusel */
+.container-slide-staff {
+  display: flex;
+  justify-content: center;
+}
+
 
 .container-slide {
   display: flex;
@@ -343,6 +374,34 @@ h2{
   margin-top: 0;
 }
 
+/* MEDIA QUERIES para mobile */
+@media (max-width: 768px) {
+  .container-staff {
+    flex-direction: column; /* En móviles se apilan los elementos */
+    width: 80%;
+    padding: 15px;
+    overflow: hidden;
+  }
+
+  .staff-item {
+    width: 100%;
+  }
+
+  .staff-img {
+    max-width: 100%; /* Se ajusta al contenedor */
+  }
+
+  .staff-text {
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .slide {
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
 @keyframes slide {
   0%{margin-left: 0;}
   15%{margin-left: 0;} 
@@ -359,6 +418,6 @@ h2{
   80%{margin-left: -440%;}
   90%{margin-left: -440%;}
 
-  95%{margin-left: -550%;}
-  100%{margin-left: -550%;}
+  95%{margin-left: 0;}
+
 }

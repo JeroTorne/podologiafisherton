@@ -1,0 +1,32 @@
+User-agent: *
+
+# Permitir acceso a la página principal y páginas públicas
+Allow: /
+
+# Bloquear acceso a archivos administrativos y sensibles
+Disallow: /admin/
+Disallow: /staff/
+Disallow: /media/avatares/
+
+# Bloquear archivos estáticos que no son necesarios para SEO
+Disallow: /static/aplicacion/assets/
+Disallow: /static/aplicacion/js/
+Disallow: /*.pyc$
+Disallow: /__pycache__/
+
+# Permitir archivos CSS para mejorar la indexación
+Allow: /static/aplicacion/css/
+
+# Referencia al sitemap (si lo tienes configurado)
+Sitemap: /sitemap.xml
+
+# Configuración específica para bots de búsqueda principales
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /staff/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /staff/
